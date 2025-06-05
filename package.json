@@ -1,0 +1,19 @@
+{
+  "name": "accountchatui",
+  "version": "1.0.0",
+  "description": "This is for my Account Chat app UI",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "author": "Praveen",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
