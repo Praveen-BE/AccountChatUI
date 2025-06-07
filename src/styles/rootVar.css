@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #0033a0;
+  --seconday-color: #c0c0c0;
+  --text-base: #000000;
+  --fs-base: 14px;
+  --fs-medium: 16px;
+
+  --fw-light: 300;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --ff-base: "Inter", sans-serif;
+}
