@@ -1,6 +1,9 @@
 :root {
   --primary-color: #0033a0;
-  --seconday-color: #c0c0c0;
+  --secondary-color: #c0c0c0;
+
+  --base-color: #ffffff;
+
   --text-base: #000000;
   --fs-base: 14px;
   --fs-medium: 16px;
@@ -11,4 +14,7 @@
   --fw-bold: 700;
 
   --ff-base: "Inter", sans-serif;
+
+  --icon-size-base: 30px;
+  --icon-size-medium: 40px;
 }

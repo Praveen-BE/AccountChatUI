@@ -1,11 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router";
-import HomeFooter from "../components/HomeFooter";
+import HomeFooter from "../components/HomeFooter.jsx";
+import HomeHeader from "../components/HomeHeader.jsx";
 
 const Home = () => {
   return (
     <div className="home">
-      <div>Header</div>
+      <HomeHeader />
       <Outlet />
       <HomeFooter />
     </div>

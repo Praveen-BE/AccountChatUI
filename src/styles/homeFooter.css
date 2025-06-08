@@ -1,0 +1,43 @@
+.home-footer {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  padding-top: 0.5rem;
+  width: 100vw;
+  height: 118px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--primary-color);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+}
+
+.home-footer__btn {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.home-footer__btn > div {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.home-footer__btn > .activeIcon {
+  margin-top: -2rem;
+  padding: 0.5rem;
+  color: var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--base-color);
+  width: 4rem;
+  height: 4rem;
+}
+
+.home-footer__btn > p {
+  color: var(--secondary-color);
+}
+
+.home-footer__btn > .activeText {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+}
