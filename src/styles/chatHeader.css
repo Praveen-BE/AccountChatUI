@@ -1,0 +1,63 @@
+.chat {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.chat-header {
+  width: 100vw;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.chat-header__back,
+.chat-header__video,
+.chat-header__phone,
+.chat-header__more {
+  width: 2rem;
+  height: 2rem;
+  color: var(--secondary-color);
+}
+
+.chat-header__picture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+}
+
+.chat-header__picture > img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.chat-header__info {
+  padding-left: 1rem;
+  color: var(--secondary-color);
+}
+
+.chat-header__info > p {
+  font-size: var(--fs-semi);
+  font-weight: var(--fw-bold);
+  display: -webkit-box; /* Required for line clamping */
+  -webkit-box-orient: vertical; /* Specifies the box orientation */
+  overflow: hidden; /* Hides overflowing content */
+  -webkit-line-clamp: 1; /* Limits text to 3 lines */
+}
+
+.chat-header__info > small {
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-light);
+  display: -webkit-box; /* Required for line clamping */
+  -webkit-box-orient: vertical; /* Specifies the box orientation */
+  overflow: hidden; /* Hides overflowing content */
+  -webkit-line-clamp: 1; /* Limits text to 3 lines */
+}

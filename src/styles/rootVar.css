@@ -4,9 +4,10 @@
 
   --base-color: #ffffff;
 
-  --text-base: #000000;
+  --text-base-color: #000000;
   --fs-base: 14px;
   --fs-medium: 16px;
+  --fs-semi: 18px;
 
   --fw-light: 300;
   --fw-medium: 500;

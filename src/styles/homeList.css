@@ -1,4 +1,4 @@
-.home-container {
+.home-page {
   margin-bottom: 3rem;
   top: 6rem;
   bottom: 4.5rem;
@@ -35,37 +35,40 @@
   height: 2rem;
 }
 
-.chatList-container {
+.home-page__container {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
-.chatList-container > .chat {
+.home-page__container > .element {
   display: flex;
+  height: 3.5rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--secondary-color);
+  text-decoration: none;
+  color: var(--base-text-color);
 }
 
-.chatList-container > .chat > picture {
-  width: 3rem;
-  height: 3rem;
+.home-page__container > .element > picture {
+  width: 55px;
+  height: 45px;
   overflow: hidden;
   border-radius: 50%;
 }
 
-.chatList-container > .chat > picture > img {
-  width: 3rem;
-  height: 3rem;
+.home-page__container > .element > picture > img {
+  width: 55px;
+  height: 45px;
 }
 
-.chatList-container > .chat > .chat-info {
+.home-page__container > .element > .element-info {
   font-size: var(--fs-medium);
   padding-left: 1rem;
 }
 
-.chatList-container > .chat > .chat-info > p {
+.home-page__container > .element > .element-info > p {
   font-weight: var(--fw-bold);
   display: -webkit-box; /* Required for line clamping */
   -webkit-box-orient: vertical; /* Specifies the box orientation */
@@ -73,7 +76,7 @@
   -webkit-line-clamp: 1; /* Limits text to 3 lines */
 }
 
-.chatList-container > .chat > .chat-info > small {
+.home-page__container > .element > .element-info > small {
   font-weight: var(--fw-light);
   display: -webkit-box; /* Required for line clamping */
   -webkit-box-orient: vertical; /* Specifies the box orientation */

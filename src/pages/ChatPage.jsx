@@ -1,12 +1,14 @@
 import React from "react";
-import SearchBar from "../components/SearchBar";
-import ChatList from "../components/ChatList";
+import ChatHeader from "../components/ChatHeader";
+import ChatMsgContainer from "../components/ChatMsgContainer";
+import ChatInputBox from "../components/ChatInputBox";
 
 const ChatPage = () => {
   return (
-    <div className="home-container">
-      <SearchBar />
-      <ChatList />
+    <div className="chat">
+      <ChatHeader />
+      <ChatMsgContainer />
+      <ChatInputBox />
     </div>
   );
 };
