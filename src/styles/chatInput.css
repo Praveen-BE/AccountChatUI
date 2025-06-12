@@ -1,0 +1,40 @@
+.chat-input {
+  position: absolute;
+  margin-left: 0.5rem;
+  bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-input__container {
+  padding-right: 0.5rem;
+  width: 85vw;
+  display: flex;
+  background-color: var(--secondary-color);
+  padding: 0.3rem;
+  border-radius: 2rem;
+  justify-content: space-around;
+}
+
+.chat-input__container > .emoji,
+.chat-input__container > .mike,
+.chat-input__container > .file,
+.chat-input__container > .camera {
+  width: 30px;
+  height: 30px;
+}
+
+.chat-input__container > .field {
+  width: 10rem;
+  padding-left: 1rem;
+  border-radius: 2rem;
+  border: 0;
+  background-color: var(--secondary-color);
+}
+
+.chat-input > button {
+  margin-left: 5px;
+  width: 2rem;
+  height: 2rem;
+}
