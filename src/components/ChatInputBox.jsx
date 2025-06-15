@@ -6,6 +6,7 @@ import {
 import { PaperClipIcon } from "@heroicons/react/24/outline";
 import { FaceSmileIcon } from "@heroicons/react/24/outline";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import TableTypes from "./TableTypes";
 
 const ChatInputBox = () => {
   return (
@@ -21,6 +22,7 @@ const ChatInputBox = () => {
         {/* <PaperAirplaneIcon className="chat-input__icon" /> */}
         <TableCellsIcon className="icon" />
       </button>
+      <TableTypes />
     </div>
   );
 };

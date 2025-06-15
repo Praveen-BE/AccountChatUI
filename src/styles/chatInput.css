@@ -38,3 +38,8 @@
   width: 2rem;
   height: 2rem;
 }
+
+.chat-input > button > .link {
+  text-decoration: none;
+  color: var(--primary-color);
+}

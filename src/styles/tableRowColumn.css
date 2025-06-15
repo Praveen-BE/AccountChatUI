@@ -1,0 +1,64 @@
+.format-container {
+  width: 100%;
+  height: 50%;
+  margin: 1rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+/* .format-table__row {
+  display: flex;
+  gap: 5px;
+} */
+
+.format-table {
+  display: grid;
+  padding: 1rem;
+  padding-right: 2rem;
+  /* grid-template-columns: repeat(5, 1fr); Ensures equal column width */
+  /* gap: 5px; */
+}
+
+.format-table__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.format-table > div:first-child {
+  background-color: var(--secondary-color);
+}
+
+.format-table__row > div {
+  flex: 1; /* Distributes space evenly */
+  min-width: 100px;
+  min-height: 50px; /* Set a minimum row height */
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.format-table__row > .slNo {
+  min-width: 20px;
+}
+
+.format-table__row > .date {
+  min-width: 90px;
+}
+.format-table__row > .description {
+  min-width: 150px;
+}
+.format-table__row > .nos {
+  min-width: 50px;
+}
+.format-table__row > .unit {
+  min-width: 50px;
+}
+.format-table__row > .ratePerUnit {
+  min-width: 50px;
+}
+.format-table__row > .amount {
+  min-width: 100px;
+}
