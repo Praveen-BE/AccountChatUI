@@ -11,6 +11,15 @@
   align-items: center;
 }
 
+.close-icon {
+  position: absolute;
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  width: 3rem;
+  right: 0;
+  top: -20px;
+}
+
 .chat-input__tables > .formats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -3,14 +3,18 @@ import { createSlice } from "@reduxjs/toolkit";
 const chatSlice = createSlice({
   name: "chat",
   initialState: {
-    isNewTableActive: true,
+    isNewTableActive: false,
   },
   reducers: {
-    toggleNewTable: (state, action) => {
-      state.isNewTableActive = !isNewTableActive;
+    updateisNewTableActive: (state) => {
+      state.isNewTableActive = true;
+    },
+    updateisNewTableNotActive: (state) => {
+      state.isNewTableActive = false;
     },
   },
 });
 
-export const { toggleNewTable } = chatSlice.actions;
+export const { updateisNewTableActive, updateisNewTableNotActive } =
+  chatSlice.actions;
 export default chatSlice.reducer;
