@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import ChatPage from "./pages/ChatPage";
 import HomeListPage from "./pages/HomeListPage";
+import SignupLoginPage from "./pages/SignupLoginPage";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/profile" element={<ProfilePage />} />
             </Route>
             <Route path="/toUser" element={<ChatPage />} />
+            <Route path="/auth" element={<SignupLoginPage />} />
           </Routes>
         </BrowserRouter>
       </Provider>

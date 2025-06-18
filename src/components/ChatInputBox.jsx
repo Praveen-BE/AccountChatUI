@@ -8,16 +8,34 @@ import { FaceSmileIcon } from "@heroicons/react/24/outline";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import TableTypes from "./TableTypes";
 import { useDispatch, useSelector } from "react-redux";
-import { updateisNewTableActive } from "../reducers/chatSlice";
+import {
+  updateisNewTableActive,
+  updateMessageInputValue,
+} from "../reducers/chatSlice";
+import { useState } from "react";
 
 const ChatInputBox = () => {
   const dispatch = useDispatch();
+  const messageInputValue = useSelector(
+    (store) => store.chat.messageInputValue
+  );
   const isNewTableActive = useSelector((store) => store.chat.isNewTableActive);
+  const handleInput = (event) => {
+    dispatch(updateMessageInputValue(event.target.innerText.trim()));
+  };
   return (
     <div className="chat-input">
       <div className="chat-input__container">
         <FaceSmileIcon className="emoji" />
-        <input placeholder="message" className="field" />
+        {/* <input placeholder="message" className="field" /> */}
+        <div
+          className="field"
+          contentEditable="true"
+          suppressContentEditableWarning="true"
+          onInput={handleInput}
+        >
+          {messageInputValue}
+        </div>
         <MicrophoneIcon className="mike" />
         <PaperClipIcon className="file" />
         <CameraIcon className="camera" />

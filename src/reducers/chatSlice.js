@@ -4,6 +4,7 @@ const chatSlice = createSlice({
   name: "chat",
   initialState: {
     isNewTableActive: false,
+    messageInputValue: "",
   },
   reducers: {
     updateisNewTableActive: (state) => {
@@ -12,9 +13,15 @@ const chatSlice = createSlice({
     updateisNewTableNotActive: (state) => {
       state.isNewTableActive = false;
     },
+    updateMessageInputValue: (state, action) => {
+      state.messageInputValue = action.payload;
+    },
   },
 });
 
-export const { updateisNewTableActive, updateisNewTableNotActive } =
-  chatSlice.actions;
+export const {
+  updateisNewTableActive,
+  updateisNewTableNotActive,
+  updateMessageInputValue,
+} = chatSlice.actions;
 export default chatSlice.reducer;

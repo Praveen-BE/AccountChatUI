@@ -1,0 +1,119 @@
+.signup {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-base);
+}
+
+picture {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--base-color);
+  margin-bottom: 1rem;
+}
+.auth {
+  position: relative;
+  margin: 0;
+  display: grid;
+  text-align: center;
+  background-color: var(--base-color);
+  border-radius: 1rem;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.create-password > .eye-icon,
+.confirm-password > .eye-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.auth-inputs {
+  display: grid;
+  position: relative;
+  gap: 1rem;
+}
+.auth-inputs > .number {
+  position: relative;
+  display: flex;
+  .mobile-code {
+    display: flex;
+    width: 3rem;
+  }
+  .mobile-number {
+    display: flex;
+    width: auto;
+  }
+}
+
+.create-password,
+.confirm-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 100%;
+  }
+}
+
+.auth input {
+  border: none;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: var(--text-base-color);
+}
+
+.auth input:active,
+.auth input:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.auth > button {
+  padding: 0.5rem;
+  background-color: var(--primary-btn-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  color: var(--base-color);
+  font-weight: var(--fw-semi-bold);
+}
+
+.auth > p > span {
+  color: var(--primary-btn-color);
+}
+
+.auth-or {
+  margin-top: 1rem;
+  position: relative;
+
+  span {
+    position: absolute;
+    background-color: var(--base-color);
+    margin-top: -15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+  }
+}
+
+.auth-google {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  font-weight: var(--fw-semi-bold);
+  border-radius: 1rem;
+}
