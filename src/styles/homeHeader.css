@@ -7,6 +7,7 @@
 }
 
 .home-header {
+  z-index: 1;
   width: 100vw;
   height: 85px;
   position: absolute;
@@ -18,9 +19,30 @@
 }
 
 .home-header__btn {
+  position: relative;
   margin-top: 2rem;
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.home-header__btn > .more-active {
+  position: absolute;
+  background-color: var(--base-color);
+  padding: 1rem;
+  width: 60vw;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px var(--secondary-color),
+    -2px -2px 2px var(--secondary-color);
+  top: 3rem;
+  left: 0.1rem;
+  text-align: left;
+  display: grid;
+  gap: 0.5rem;
+
+  a {
+    text-decoration: none;
+    color: var(--text-base-color);
+  }
 }
 
 .home-header__logo {
