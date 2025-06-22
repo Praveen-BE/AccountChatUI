@@ -26,6 +26,7 @@
 }
 
 .home-header__btn > .more-active {
+  display: grid;
   position: absolute;
   background-color: var(--base-color);
   padding: 1rem;
@@ -36,13 +37,29 @@
   top: 3rem;
   left: 0.1rem;
   text-align: left;
-  display: grid;
   gap: 0.5rem;
+  animation: slideFromTop 0.05s ease-in forwards;
 
   a {
     text-decoration: none;
     color: var(--text-base-color);
   }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.home-header__btn > .animation-more-active {
+}
+.home-header__btn > .hide-more-active {
+  visibility: hidden;
 }
 
 .home-header__logo {
