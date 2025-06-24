@@ -1,0 +1,15 @@
+.setting {
+  margin: 0;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+.setting-back {
+  width: 2rem;
+}
+
+.setting-profile {
+  display: grid;
+  gap: 1rem;
+}

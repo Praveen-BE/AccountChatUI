@@ -1,18 +1,23 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BASE_URL } from "../utils/constant";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { addUserData } from "../reducers/userSlice";
+import ReactCountryFlag from "react-country-flag";
+import { countries } from "../utils/mobileCode";
 
 const SignupLoginPage = () => {
   const [isLogin, setIsLogin] = useState(false);
-  const email = useRef(null);
-  const mobileCode = useRef(null);
-  const mobileNumber = useRef(null);
-  const createPassword = useRef(null);
-  const confirmPassword = useRef(null);
+  const [countryCodeState, setCountryCodeState] = useState("AF");
+  const email = useRef("");
+  const mobileCode = useRef("AF");
+  const mobileNumber = useRef("");
+  const createPassword = useRef("");
+  const confirmPassword = useRef("");
   const dispatch = useDispatch();
+  const [isTypeCreatePassword, setIsTypeCreatePassword] = useState(true);
+  const [isTypeConfirmPassword, setIsTypeConfirmPassword] = useState(true);
 
   const navigate = useNavigate();
 
@@ -38,23 +43,28 @@ const SignupLoginPage = () => {
     }
   };
   const callSignUpApi = async () => {
-    const userInputs = {
-      emailId: email.current.value,
-      mobileCountryCode: mobileCode.current.value,
-      mobileNumber: mobileNumber.current.value,
-      createPassword: createPassword.current.value,
-      confirmPassword: confirmPassword.current.value,
-    };
-    const res = await fetch(BASE_URL + "auth/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(userInputs),
-      credentials: "include",
-    });
-    const data = await res.json();
-    console.log(data);
-    dispatch(addUserData(data.data));
-    navigate("/");
+    try {
+      const userInputs = {
+        emailId: email.current.value,
+        mobileCountryCode: mobileCode.current.value,
+        mobileNumber: mobileNumber.current.value,
+        createPassword: createPassword.current.value,
+        confirmPassword: confirmPassword.current.value,
+      };
+      // console.log(userInputs);
+      const res = await fetch(BASE_URL + "auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userInputs),
+        credentials: "include",
+      });
+      const data = await res.json();
+      console.log(data);
+      dispatch(addUserData(data.data));
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -75,15 +85,24 @@ const SignupLoginPage = () => {
           ) : (
             <>
               <div className="number">
-                <input
-                  placeholder="+91"
-                  className="mobile-code"
-                  type="select"
+                <select
                   ref={mobileCode}
-                />
+                  className="dial-codes"
+                  defaultValue={mobileCode}
+                >
+                  {countries.map((data) => (
+                    <option
+                      className="dial-code"
+                      key={data.name}
+                      value={data.dialCode}
+                    >
+                      {data.code + " " + data.dialCode}
+                    </option>
+                  ))}
+                </select>
                 <input
                   id="number"
-                  type="number"
+                  type="String"
                   className="mobile-number"
                   placeholder="Type your Mobile Number"
                   ref={mobileNumber}
@@ -92,10 +111,24 @@ const SignupLoginPage = () => {
               <div id="create-password" className="create-password">
                 <input
                   ref={createPassword}
-                  type="password"
+                  type={isTypeCreatePassword ? "password" : "text"}
                   placeholder="Create Password"
                 />{" "}
-                <EyeSlashIcon className="eye-icon" />
+                {isTypeCreatePassword ? (
+                  <EyeSlashIcon
+                    onClick={() =>
+                      setIsTypeCreatePassword(!isTypeCreatePassword)
+                    }
+                    className="eye-icon"
+                  />
+                ) : (
+                  <EyeIcon
+                    onClick={() =>
+                      setIsTypeCreatePassword(!isTypeCreatePassword)
+                    }
+                    className="eye-icon"
+                  />
+                )}
               </div>
             </>
           )}
@@ -103,10 +136,20 @@ const SignupLoginPage = () => {
           <div id="confirm-password" className="confirm-password">
             <input
               ref={confirmPassword}
-              type="password"
+              type={isTypeConfirmPassword ? "password" : "text"}
               placeholder={false ? "Confirm Password" : "Password"}
-            />{" "}
-            <EyeIcon className="eye-icon" />
+            />
+            {isTypeConfirmPassword ? (
+              <EyeSlashIcon
+                onClick={() => setIsTypeConfirmPassword(!isTypeConfirmPassword)}
+                className="eye-icon"
+              />
+            ) : (
+              <EyeIcon
+                onClick={() => setIsTypeConfirmPassword(!isTypeConfirmPassword)}
+                className="eye-icon"
+              />
+            )}
           </div>
         </div>
         {isLogin ? (

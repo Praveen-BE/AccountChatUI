@@ -11,7 +11,9 @@ const Home = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   useEffect(() => {
-    fetchUserData();
+    if (!userData) {
+      fetchUserData();
+    }
   }, []);
 
   const fetchUserData = async () => {
@@ -19,20 +21,20 @@ const Home = () => {
       const res = await fetch(BASE_URL + "profile/user", {
         method: "GET",
         credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
       });
+      if (!res.ok) {
+        if (res.status === 401) {
+          dispatch(removeUserData());
+          navigate("/auth");
+        }
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
 
       // console.log(res);
       const data = await res.json();
       // console.log(data);
       dispatch(addUserData(data.data));
     } catch (err) {
-      if (err.status == 401) {
-        dispatch(removeUserData());
-        navigate("/auth");
-      }
       console.log("ERROR : " + err);
     }
   };

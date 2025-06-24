@@ -57,6 +57,18 @@ picture {
   }
 }
 
+.dial-codes {
+  max-width: 3rem;
+  background-color: var(--secondary-color);
+  color: var(--text-base-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: none;
+}
+.dial-code {
+  max-width: 1rem;
+}
+
 .create-password,
 .confirm-password {
   display: flex;

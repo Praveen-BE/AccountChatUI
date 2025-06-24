@@ -56,8 +56,7 @@
     opacity: 1;
   }
 }
-.home-header__btn > .animation-more-active {
-}
+
 .home-header__btn > .hide-more-active {
   visibility: hidden;
 }

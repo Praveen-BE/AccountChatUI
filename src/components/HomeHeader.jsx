@@ -40,10 +40,10 @@ const HomeHeader = () => {
           <Link to={"/adddevice"}>
             <p>Linked Devices</p>
           </Link>
-          <Link to={"/settings"}>
+          <Link to={"/starred"}>
             <p>Starred Messages</p>
           </Link>
-          <Link to={"/starred"}>
+          <Link to={"/settings"}>
             <p>Settings</p>
           </Link>
         </div>
