@@ -9,7 +9,71 @@
   width: 2rem;
 }
 
-.setting-profile {
+.setting > .setting-profile {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+
+  picture {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  h3 {
+    font-size: var(--fs-medium);
+    span {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-semi);
+    }
+  }
+  p {
+    font-size: var(--fs-medium);
+  }
+}
+
+.setting-contact {
+  margin-top: 1rem;
+  text-align: center;
+}
+.setting-privacy {
+  margin-top: 1rem;
+}
+.setting-privacy__profileImage,
+.setting-privacy__about {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  label {
+    display: flex;
+
+    span {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.setting-logout {
+  margin-top: 5rem;
+  text-align: center;
+
+  button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 1rem;
+    color: var(--base-color);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-semi);
+    background-color: var(--primary-btn-color);
+  }
 }
