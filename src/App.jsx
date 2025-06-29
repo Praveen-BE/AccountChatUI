@@ -14,6 +14,9 @@ import CreateGroupPage from "./pages/CreateGroupPage";
 import LinkedDevicesPage from "./pages/LinkedDevicesPage";
 import SettingsPage from "./pages/SettingsPage";
 import StarredMessagesPage from "./pages/StarredMessagesPage";
+import AddNewContact from "./pages/AddNewContact";
+import SearchCardPreviewPage from "./pages/SearchCardPreviewPage";
+import useFetchUserData from "./hooks/useFetchUserData";
 
 const App = () => {
   return (
@@ -28,6 +31,8 @@ const App = () => {
               <Route path="/profile" element={<ProfilePage />} />
             </Route>
             <Route path="/toUser" element={<ChatPage />} />
+            <Route path="/userPreview" element={<SearchCardPreviewPage />} />
+            <Route path="/addContact" element={<AddNewContact />} />
             <Route path="/auth" element={<SignupLoginPage />} />
             <Route path="/creategroup" element={<CreateGroupPage />} />
             <Route path="/adddevice" element={<LinkedDevicesPage />} />

@@ -5,10 +5,9 @@ import useFetchUserData from "../hooks/useFetchUserData.js";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const userData = useSelector((store) => store.user.userData);
-  if (!userData) {
-    useFetchUserData();
-  }
+  // const userData = useSelector((store) => store.user.userData);
+
+  useFetchUserData();
 
   return (
     <div className="home">

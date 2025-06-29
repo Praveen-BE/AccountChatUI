@@ -12,7 +12,7 @@ const useFetchUserData = async () => {
     if (!userData) {
       fetchUserData();
     }
-  }, []);
+  }, [userData]);
   const fetchUserData = async () => {
     try {
       const res = await fetch(BASE_URL + "profile/user", {

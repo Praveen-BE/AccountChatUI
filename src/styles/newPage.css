@@ -1,0 +1,21 @@
+.new {
+  margin-bottom: 3rem;
+  top: 6rem;
+  bottom: 4.5rem;
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.new > a {
+  margin-top: 0.5rem;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+.new-back {
+  margin: 1.5rem;
+  width: 2rem;
+}

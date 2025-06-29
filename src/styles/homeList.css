@@ -41,7 +41,8 @@
   padding: 1rem;
 }
 
-.home-page__container > .element {
+/* .home-page__container >  */
+.element {
   display: flex;
   height: 3.5rem;
   padding-bottom: 1rem;
@@ -51,24 +52,28 @@
   color: var(--base-text-color);
 }
 
-.home-page__container > .element > picture {
-  width: 55px;
+/* .home-page__container >  */
+.element > .profile > picture {
+  width: 45px;
   height: 45px;
   overflow: hidden;
   border-radius: 50%;
 }
 
-.home-page__container > .element > picture > img {
+/* .home-page__container >  */
+.element > .profile > picture > img {
   width: 55px;
   height: 45px;
 }
 
-.home-page__container > .element > .element-info {
+/* .home-page__container >  */
+.element > .element-info {
   font-size: var(--fs-medium);
   padding-left: 1rem;
 }
 
-.home-page__container > .element > .element-info > p {
+/* .home-page__container > */
+.element > .element-info > p {
   font-weight: var(--fw-bold);
   display: -webkit-box; /* Required for line clamping */
   -webkit-box-orient: vertical; /* Specifies the box orientation */
@@ -76,7 +81,8 @@
   -webkit-line-clamp: 1; /* Limits text to 3 lines */
 }
 
-.home-page__container > .element > .element-info > small {
+/* .home-page__container >  */
+.element > .element-info > small {
   font-weight: var(--fw-light);
   display: -webkit-box; /* Required for line clamping */
   -webkit-box-orient: vertical; /* Specifies the box orientation */
