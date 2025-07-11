@@ -22,6 +22,7 @@
   background-color: var(--secondary-color);
   border: none;
   padding-left: 1rem;
+  outline: none;
 }
 
 .search-btn {

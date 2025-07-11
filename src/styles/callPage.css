@@ -1,0 +1,10 @@
+.call {
+  margin-bottom: 3rem;
+  top: 6rem;
+  bottom: 4.5rem;
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}

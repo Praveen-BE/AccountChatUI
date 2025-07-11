@@ -3,7 +3,7 @@ import useFetchUserData from "../hooks/useFetchUserData.js";
 
 const CallPage = () => {
   useFetchUserData();
-  return <div>CallPage</div>;
+  return <div className="call">CallPage</div>;
 };
 
 export default CallPage;

@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 const Home = () => {
   // const userData = useSelector((store) => store.user.userData);
 
-  useFetchUserData();
+  // useFetchUserData();
 
   return (
     <div className="home">

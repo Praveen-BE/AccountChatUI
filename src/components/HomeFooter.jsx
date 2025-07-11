@@ -4,13 +4,27 @@ import {
   PlusCircleIcon,
 } from "@heroicons/react/24/outline";
 
-import React from "react";
+import React, { useEffect } from "react";
 import HomeNavButton from "./HomeNavButton";
-import { useSelector } from "react-redux";
-import { Link } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation } from "react-router";
+import { updateActiveHomeNav } from "../reducers/pageSlice";
 
 const HomeFooter = () => {
   const activeHome = useSelector((store) => store.page.activeHome);
+  const location = useLocation();
+  const dispatch = useDispatch();
+  // console.log(location.pathname);
+  useEffect(() => {
+    if (location.pathname == "/") {
+      dispatch(updateActiveHomeNav("Home"));
+    } else if (location.pathname == "/new") {
+      dispatch(updateActiveHomeNav("New"));
+    } else if (location.pathname == "/calls") {
+      dispatch(updateActiveHomeNav("Calls"));
+    }
+  }, []);
+
   return (
     <div className="home-footer">
       <Link to={"/"}>

@@ -35,7 +35,7 @@ export const ListElementPreviw = () => {
           />
         </picture>
       </Link>
-      <Link to={"/userPreview"} className="element">
+      <Link to={"/toUser"} className="element">
         <div className="element-info">
           <p>School Building</p>
           <small>New Enithi User</small>
